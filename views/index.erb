@@ -1,0 +1,50 @@
+<html>
+    <head>
+        <title>TABLIZER</title>
+        <link rel="stylesheet" href="css/foundation.css" type="text/css" />
+        <link rel="stylesheet" href="css/application.css" type="text/css" />
+    </head>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+<body>
+  <div class="row">
+    <div class="medium-8 large-4 medium-centered columns">
+      <h1 class="header text-center">TABLIZER</h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="large-6 columns">
+      <form action="/generate_output" id="form_for_table_input" >
+        <input type="url" name="url" class="input" id="url" placeholder="Enter the url">
+        <div class="text-center">Or</div>
+        <textarea form="form_for_table_input" name="input_html" id="input_html" class="input" placeholder="Paste the HTML"></textarea>
+        <div class="row">
+          <div class="large-6 columns">
+            <select  id="table_select" class="input" name="table_no" >
+              <option>All</option>
+            </select>
+          </div>
+          <div class="large-6 columns">
+            Website/HTML may contain multiple tables.Select All or a table to convert.
+          </div>
+        </div>
+      </form>
+      <br/>
+    </div>
+    <div class="large-6 columns">
+      <form id="form_for_table_output" method="post">
+        <textarea form="form_for_table_output" name="output" id="output"rows="20"></textarea>
+      </form>
+      <div class="row">
+        <div class="large-6 columns">
+          <a href="downloadcsv" class="download button">Download CSV</a>
+          <a href="downloadxls" class="download button">Download Excel</a>
+        </div>
+        <div class="large-6 columns">
+          <input form="form_for_table_output" type="text" name="file_name" placeholder="File Name" value="output">
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
